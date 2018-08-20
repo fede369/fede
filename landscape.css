@@ -47,7 +47,7 @@ a:hover {
     color: red;
 }
 .bg-img {
-    background-image: url("land.jpg");
+    background-image: url("land.JPG");
     min-height: 640px;
     background-position: center;
     background-repeat: no-repeat;
