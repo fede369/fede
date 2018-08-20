@@ -41,7 +41,7 @@ a:hover {
     color: red;
 }
 .bg-img {
-    background-image: url("people.jpg");
+    background-image: url("people.JPG");
     min-height: 700px;
     background-position: center;
     background-repeat: no-repeat;
