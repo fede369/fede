@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel-Federica Prunotto</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="travel.css" type="text/css">
+</head>
+<style>
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 30px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.close {
+  color: white;
+  position: fixed;
+  top: 70px;
+  right: 50px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+}
+
+.next {
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  position: fixed;
+  left: 50px;
+  top: 50%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+img {
+  margin-bottom: -4px;
+  width: 80%;
+}
+
+.caption-container {
+  text-align: center;
+
+  padding: 2px 16px;
+  color: black;
+}
+
+
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<body onload="myFunction()">
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+  <div class="bg-img">
+  <form action="/action_page.php"></form>
+  <ul>
+    <h1><a href="index.html">FEDERICA PRUNOTTO</a></h1>
+    <li><a href="contacts.html">CONTACTS</a></li>
+    <li><a href="bio.html">BIO</a></li>
+    <li><a href="projects.html">PROJECTS</a></li>
+    <li><a class="active" href="travel.html">TRAVEL</a></li>
+    <li><a href="landscape.html">LANDSCAPE</a></li>
+    <li><a href="people.html">PEOPLE</a></li>
+  </ul>
+  <div class="header">
+    <h2 style="font-size: 80px; font-weight: bold;
+    font-style: italic">TRAVEL</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>Berlin</h2>
+    <img src="berl11.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <h2>Copenhagen</h2>
+    <img src="cop7.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <h2>Florence</h2>
+    <img src="flo16.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <h2>London</h2>
+    <img src="london20.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="berl11.jpg" style="width:100%">
+      <img src="berl7.jpg" style="width:100%">
+      <img src="berl14.jpg" style="width:100%">
+      <img src="berl15.jpg" style="width:100%">
+      <img src="berl19.jpg" style="width:100%">
+      <img src="berl8.jpg" style="width:100%">
+      <img src="berl22.jpg" style="width:100%">
+      <img src="berl16.jpg" style="width:100%">
+      <img src="berl17.jpg" style="width:100%">
+      <img src="berl25.jpg" style="width:100%">
+      <img src="berl26.jpg" style="width:100%">
+      <img src="berl18.jpg" style="width:100%">
+      <img src="berl9.jpg" style="width:100%">
+      <img src="berl4.jpg" style="width:100%">
+      <img src="berl27.jpg" style="width:100%">
+      <img src="berl13.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="cop7.jpg" style="width:100%">
+      <img src="cop8.jpg" style="width:100%">
+      <img src="cop9.jpg" style="width:100%">
+      <img src="cop4.jpg" style="width:100%">
+      <img src="cop25.jpg" style="width:100%">
+      <img src="cop10.jpg" style="width:100%">
+      <img src="cop14.jpg" style="width:100%">
+      <img src="cop11.jpg" style="width:100%">
+      <img src="cop12.jpg" style="width:100%">
+      <img src="cop13.jpg" style="width:100%">
+      <img src="cop15.jpg" style="width:100%">
+      <img src="cop6.jpg" style="width:100%">
+      <img src="cop18.jpg" style="width:100%">
+      <img src="cop19.jpg" style="width:100%">
+      <img src="cop20.jpg" style="width:100%">
+      <img src="cop24.jpg" style="width:100%">
+      <img src="cop16.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="flo16.jpg" style="width:100%">
+      <img src="flo2.jpg" style="width:100%">
+      <img src="flo5.jpg" style="width:100%">
+      <img src="flo1.jpg" style="width:100%">
+      <img src="flo8.jpg" style="width:100%">
+      <img src="flo6.jpg" style="width:100%">
+      <img src="flo10.jpg" style="width:100%">
+      <img src="flo19.jpg" style="width:100%">
+      <img src="flo18.jpg" style="width:100%">
+      <img src="flo4.jpg" style="width:100%">
+      <img src="flo7.jpg" style="width:100%">
+      <img src="flo15.jpg" style="width:100%">
+      <img src="flo9.jpg" style="width:100%">
+      <img src="flo12.jpg" style="width:100%">
+      <img src="flo13.jpg" style="width:100%">
+      <img src="flo20.jpg" style="width:100%">
+      <img src="flo21.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="london20.jpg" style="width:100%">
+      <img src="london25.jpg" style="width:100%">
+      <img src="london1.jpg" style="width:100%">
+      <img src="london6.jpg" style="width:100%">
+      <img src="london14.jpg" style="width:100%">
+      <img src="london13.jpg" style="width:100%">
+      <img src="london16.jpg" style="width:100%">
+      <img src="london17.jpg" style="width:100%">
+      <img src="london18.jpg" style="width:100%">
+      <img src="london19.jpg" style="width:100%">
+      <img src="london21.jpg" style="width:100%">
+      <img src="london22.jpg" style="width:100%">
+      <img src="london24.jpg" style="width:100%">
+      <img src="london26.jpg" style="width:100%">
+      <img src="london9.jpg" style="width:100%">
+      <img src="london10.jpg" style="width:100%">
+      <img src="london11.jpg" style="width:100%">
+      <img src="london12.jpg" style="width:100%">
+
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div id="loader"></div>
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>

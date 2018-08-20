@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landscape-Federica Prunotto</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+  <link rel="stylesheet" href="landscape.css" type="text/css">
+
+
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+  <div class="bg-img">
+  <form action="/action_page.php"></form>
+  <ul>
+    <h1><a href="index.html">FEDERICA PRUNOTTO</a></h1>
+    <li><a href="contacts.html">CONTACTS</a></li>
+    <li><a href="bio.html">BIO</a></li>
+    <li><a href="projects.html">PROJECTS</a></li>
+    <li><a href="travel.html">TRAVEL</a></li>
+    <li><a class="active" href="landscape.html">LANDSCAPE</a></li>
+    <li><a href="people.html">PEOPLE</a></li>
+  </ul>
+  <div class="header">
+    <h2 style="font-size: 80px; font-weight: bold;
+    font-style: italic">LANDSCAPE</h2>
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="l1.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l5.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l9.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l13.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l19.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l17.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l21.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l27.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+
+
+  </div>
+  <div class="column">
+    <img src="l2.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l6.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l10.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l23.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l14.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l25.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l26.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l30.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="column">
+    <img src="l3.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l7.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l11.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l15.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l18.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l29.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l32.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="column">
+    <img src="l4.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l8.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l31.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l16.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l20.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l24.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <img src="l28.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+      <img id="img01" style="width:100%">
+    </div>
+  </div>
+
+  <script>
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+  }
+  </script>
+
+
+</div>
+</body>
+</html>

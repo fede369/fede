@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacts-Federica Prunotto</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="contacts.css" type="text/css">
+</head>
+<body onload="myFunction()">
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+  <div class="bg-img">
+    <ul>
+    <h1><a id="logo" href="index.html">FEDERICA PRUNOTTO</a></h1>
+    <li><a id="n1" class="active" href="contacts.html">CONTACTS</a></li>
+    <li><a id="n2" href="bio.html">BIO</a></li>
+    <li><a id="n3" href="projects.html">PROJECTS</a></li>
+    <li><a id="n4" href="travel.html">TRAVEL</a></li>
+    <li><a id="n5" href="landscape.html">LANDSCAPE</a></li>
+    <li><a id="n6" href="people.html">PEOPLE</a></li>
+  </ul>
+</div>
+<table class="new table">
+  <tbody>
+    <tr>
+      <td class="button-td">
+        <a href="mailto:federica.prunotto@gmail.com">
+          <img class="button" src="gmail.ico">
+        </a>
+      </td>
+      <td id="nlink-1" class="news-link">
+        <a href="mailto:federica.prunotto@gmai.com">federica.prunotto@gmail.com</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="button">
+        <a href="https://www.facebook.com/federica.prunotto.1" target="_blank">
+          <img class="button" src="facebook.ico">
+        </a>
+      </td>
+      <td id="nlink-2" class="news-link">
+        <a href="https://www.facebook.com/federica.prunotto.1"  target="_blank">Federica Prunotto</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="news-date">
+        <a href="https://www.instagram.com/fedeprunotto/?hl=it" target="_blank">
+          <img class="button" src="instagram.ico">
+        </a>
+      </td>
+      <td id="nlink-3" class="news-link">
+        <a href="https://www.instagram.com/fedeprunotto/?hl=it"  target="_blank">fedeprunotto</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div id="loader"></div>
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 500);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+
+</body>
+</html>
