@@ -144,14 +144,18 @@ img.hover-shadow {
   <div style="display:none;" id="myDiv" class="animate-bottom">
   <div class="bg-img">
   <form action="/action_page.php"></form>
-  <ul>
+  <ul class="topnav">
     <h1><a href="index.html">FEDERICA PRUNOTTO</a></h1>
     <li><a href="contacts.html">CONTACTS</a></li>
     <li><a href="bio.html">BIO</a></li>
-    <li><a  class="active" href="projects.html">PROJECTS</a></li>
+    <li><a id="active" href="projects.html">PROJECTS</a></li>
     <li><a href="travel.html">TRAVEL</a></li>
     <li><a href="landscape.html">LANDSCAPE</a></li>
     <li><a href="people.html">PEOPLE</a></li>
+    <li><a href="people.html">PEOPLE</a></li>
+    <li class="icon">
+   <a href="javascript:void(0);" style="font-size:15px;" onclick="Function()">☰</a>
+  </li>
   </ul>
   <div class="header">
     <h2 style="font-size: 80px; font-weight: bold;
@@ -299,6 +303,10 @@ function myFunction() {
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
+}
+
+function Function() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
 }
 </script>
 

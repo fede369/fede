@@ -5,30 +5,63 @@
   <title>Landscape-Federica Prunotto</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="landscape.css" type="text/css">
-
-
 </head>
+<style>
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid  opacity;
+  border-radius: 50%;
+  border-top: 16px solid;
+  width: 160px;
+  height: 160px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-bottom {
+  position: relative;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+</style>
 <body>
-  <div class="topnav" id="myTopnav">
+  <body onload="myFunction()">
+  <div style="display:none;" id="myDiv" class="animate-bottom">
   <div class="bg-img">
   <form action="/action_page.php"></form>
-  <ul>
+  <ul class="topnav">
     <h1><a href="index.html">FEDERICA PRUNOTTO</a></h1>
     <li><a href="contacts.html">CONTACTS</a></li>
     <li><a href="bio.html">BIO</a></li>
     <li><a href="projects.html">PROJECTS</a></li>
     <li><a href="travel.html">TRAVEL</a></li>
-    <li><a class="active" href="landscape.html">LANDSCAPE</a></li>
+    <li><a id="active" href="landscape.html">LANDSCAPE</a></li>
     <li><a href="people.html">PEOPLE</a></li>
+    <li class="icon">
+   <a href="javascript:void(0);" style="font-size:15px;" onclick="Function()">☰</a>
+  </li>
   </ul>
   <div class="header">
     <h2 style="font-size: 80px; font-weight: bold;
     font-style: italic">LANDSCAPE</h2>
   </div>
 </div>
-</div>
 
 <div class="row">
+
   <div class="column">
     <img src="l1.JPG" style="width:100%;cursor:pointer"
     onclick="onClick(this)" class="w3-hover-opacity">
@@ -46,9 +79,8 @@
     onclick="onClick(this)" class="w3-hover-opacity">
     <img src="l27.JPG" style="width:100%;cursor:pointer"
     onclick="onClick(this)" class="w3-hover-opacity">
-
-
   </div>
+
   <div class="column">
     <img src="l2.JPG" style="width:100%;cursor:pointer"
     onclick="onClick(this)" class="w3-hover-opacity">
@@ -67,6 +99,7 @@
     <img src="l30.JPG" style="width:100%;cursor:pointer"
     onclick="onClick(this)" class="w3-hover-opacity">
   </div>
+
   <div class="column">
     <img src="l3.JPG" style="width:100%;cursor:pointer"
     onclick="onClick(this)" class="w3-hover-opacity">
@@ -83,6 +116,7 @@
     <img src="l32.JPG" style="width:100%;cursor:pointer"
     onclick="onClick(this)" class="w3-hover-opacity">
   </div>
+
   <div class="column">
     <img src="l4.JPG" style="width:100%;cursor:pointer"
     onclick="onClick(this)" class="w3-hover-opacity">
@@ -99,19 +133,35 @@
     <img src="l28.JPG" style="width:100%;cursor:pointer"
     onclick="onClick(this)" class="w3-hover-opacity">
   </div>
-
   <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
       <img id="img01" style="width:100%">
     </div>
   </div>
+  </div>
+</div>
+  <div id="loader"></div>
+<script>
 
-  <script>
   function onClick(element) {
     document.getElementById("img01").src = element.src;
     document.getElementById("modal01").style.display = "block";
   }
+  var myVar;
+  function myFunction() {
+      myVar = setTimeout(showPage, 500);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+
+  function Function() {
+      document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+  }
+
   </script>
 
 
