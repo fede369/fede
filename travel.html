@@ -164,19 +164,19 @@ img.hover-shadow {
 <div class="row">
   <div class="column">
     <h2>Berlin</h2>
-    <img src="berl11.JPG" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <img class="demo" src="berl11.JPG" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
   </div>
   <div class="column">
     <h2>Copenhagen</h2>
-    <img src="cop7.JPG" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <img class="demo" src="cop7.JPG" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
   </div>
   <div class="column">
     <h2>Florence</h2>
-    <img src="flo16.JPG" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <img class="demo" src="flo16.JPG" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
   </div>
   <div class="column">
     <h2>London</h2>
-    <img src="london20.JPG" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <img class="demo" src="london20.JPG"  style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
   </div>
 </div>
 
@@ -316,7 +316,11 @@ function showSlides(n) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  const selectedDot = dots[slideIndex - 1];
+  if (selectedDot) {
+    selectedDot.classNames += " active";
+  } else
+    console.log(dots, slideIndex, selectedDot);
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 var myVar;
